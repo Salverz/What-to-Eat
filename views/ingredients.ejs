@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Ingredients</title>
+</head>
+<body>
+    <h1>Ingredients</h1>
+    <input id="ingredient-input" type="text" placeholder="Enter an ingredient">
+    <button id="ingredient-add-button">Add</button>
+    Ignore pantry items: <input type="checkbox">
+    <ul id="ingredient-list">
+        <% ingredients.forEach(ingredient => { %>
+            <li id="<%= ingredient.ingredient %>">
+                <button class="remove-button" data-ingredient="<%= ingredient.ingredient %>">
+                    Remove
+                </button>
+                <%= ingredient.ingredient %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <script src="/script/ingredients.js"></script>
+</body>
+</html>
