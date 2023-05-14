@@ -23,11 +23,14 @@ app.use(session({
 app.use(function(req, res, next) {
   if (!req.session.user) {
     req.session.user = {
-      id: 2
+      id: 2,
+      location: 70400534
     };
   }
   if (!req.session.data) {
-    req.session.data = {};
+    req.session.data = {
+      productData : {}
+    };
   }
   next();
 });

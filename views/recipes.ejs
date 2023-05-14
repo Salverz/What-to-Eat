@@ -5,6 +5,7 @@
     <title>Document</title>
 </head>
 <body>
+    <%- include('partials/nav.ejs') %>
     <h1>Recipes</h1>
     <% recipes.forEach(recipe => { %>
         <h2><%= recipe.title %></h2>
@@ -34,5 +35,6 @@
             </ul>
         <% }); %>
     <% }); %>
+    <script src="/script/recipes.js"></script>
 </body>
 </html>

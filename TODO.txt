@@ -1,0 +1,3 @@
+Save the date/time that product data was retreived and then
+    - allow the user to see and clear that cache
+    - automatically refresh the data for that ingredient if it has been x amount of time
